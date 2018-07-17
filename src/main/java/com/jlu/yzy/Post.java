@@ -8,14 +8,34 @@ public class Post {
      */
 
     // your code here：定义id
-    int id;
+    long id;
     String title;
     String content;
+    // 第一个构造函数，
+    public Post(){}
+
+    // 第二个构造函数，传入标题和内容
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    public Post(long id,String title,String content){
+        this.id=id;
+        this.title=title;
+        this.content=content;
+
+    }
 
     void print() {
         System.out.print(id);
         System.out.println(title);
         System.out.println(content);
+
+        StringBuilder sb =new StringBuilder();
+        sb.append("<html>").append("<head>")
+                .append("<title>"+this.title+"</title>");
+        System.out.print(sb);
 
     }
 }
