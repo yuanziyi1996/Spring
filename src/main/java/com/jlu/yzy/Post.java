@@ -28,12 +28,22 @@ public class Post {
     }
 
     void print() {
+        /*
         System.out.print(id);
         System.out.println(title);
         System.out.println(content);
+        */
 
         StringBuilder sb =new StringBuilder();
-        sb.append("<html>").append("<head>").append("<title>").append(this.title).append("</title>");
+        sb.append("<html>").append("\n")
+                .append("<head>").append("\n")
+                .append("<title>").append(this.title).append("</title>").append("\n")
+                 .append("</head>").append("\n")
+                .append("<body>").append("\n")
+                .append("<h1>").append(this.id).append(".").append(this.title).append("</h1>")
+                .append("<p>").append(this.content).append("</p>").append("\n")
+                .append("</body>").append("\n")
+                .append("</html>");
         System.out.print(sb);
 
     }
