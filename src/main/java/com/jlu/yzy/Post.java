@@ -33,8 +33,7 @@ public class Post {
         System.out.println(content);
 
         StringBuilder sb =new StringBuilder();
-        sb.append("<html>").append("<head>")
-                .append("<title>"+this.title+"</title>");
+        sb.append("<html>").append("<head>").append("<title>").append(this.title).append("</title>");
         System.out.print(sb);
 
     }
